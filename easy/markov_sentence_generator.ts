@@ -33,7 +33,7 @@ function createDictionnary(sourceText: string, keySize: number){
             dict.set(dictKey,suffixes);
         }
     
-        // Remove first word in array
+        // Remove first word in source text array
         sourceTextSplited.splice(0,1);
     }
     

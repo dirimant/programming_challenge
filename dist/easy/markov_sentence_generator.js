@@ -50,10 +50,10 @@ function createDictionnary(sourceText, keySize) {
         if (suffixes.length != 0) {
             dict.set(dictKey, suffixes);
         }
-        // Remove first word in array
+        // Remove first word in source text array
         sourceTextSplited.splice(0, 1);
     }
-    console.log(dict);
+    //console.log(dict);
     return dict;
 }
 function markov(maxSizeText) {
