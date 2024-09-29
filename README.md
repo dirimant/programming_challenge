@@ -1,7 +1,8 @@
 
 
-Done: \n
-  EASY 
+Done:
+
+EASY 
   - Markov Sentence Generator
   - FizzBuzz
   - 
