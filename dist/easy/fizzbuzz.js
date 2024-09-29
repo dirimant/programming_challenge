@@ -10,13 +10,17 @@ function fizzBuzz(value) {
         numbers.set(i, i);
     }
     for (let i = 1; i < numbers.size + 1; i++) {
-        if (numbers.get(i) % 3 == 0)
-            numbers.set(i, 'Fizz');
-        if (numbers.get(i) % 5 == 0)
+        if (numbers.get(i) % 3 == 0) {
+            if (numbers.get(i) % 5 == 0) {
+                numbers.set(i, 'FizzBuzz');
+            }
+            else {
+                numbers.set(i, 'Fizz');
+            }
+        }
+        else if (numbers.get(i) % 5 == 0)
             numbers.set(i, 'Buzz');
-        if (numbers.get(i) % 3 == 0 && numbers.get(i) % 5 == 0)
-            numbers.set(i, 'FizzBuzz');
     }
     return numbers;
 }
-console.log(fizzBuzz(10));
+console.log(fizzBuzz(100));
