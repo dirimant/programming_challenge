@@ -6,10 +6,10 @@
 //    answer[i] == i (as a string) if none of the above conditions are true.
 function fizzBuzz(value) {
     let numbers = new Map();
-    for (let i = 1; i < value; i++) {
+    for (let i = 1; i < value + 1; i++) {
         numbers.set(i, i);
     }
-    for (let i = 1; i < numbers.size; i++) {
+    for (let i = 1; i < numbers.size + 1; i++) {
         if (numbers.get(i) % 3 == 0)
             numbers.set(i, 'Fizz');
         if (numbers.get(i) % 5 == 0)
@@ -19,7 +19,4 @@ function fizzBuzz(value) {
     }
     return numbers;
 }
-function main() {
-    console.log(fizzBuzz(10));
-}
-main();
+console.log(fizzBuzz(10));

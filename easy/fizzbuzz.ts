@@ -6,11 +6,11 @@
 
 function fizzBuzz(value: number){
     let numbers = new Map<number,any>()
-    for(let i = 1; i<value; i++){
+    for(let i = 1; i<value+1; i++){
         numbers.set(i,i);
     }
     
-    for(let i = 1; i < numbers.size; i++){
+    for(let i = 1; i < numbers.size + 1; i++){
         if(numbers.get(i) % 3 == 0) numbers.set(i, 'Fizz');
         if(numbers.get(i) % 5 == 0) numbers.set(i, 'Buzz');
         if(numbers.get(i) % 3 == 0 && numbers.get(i) % 5 == 0) numbers.set(i, 'FizzBuzz');
@@ -18,8 +18,4 @@ function fizzBuzz(value: number){
     return numbers;
 }
 
-function main(){
-    console.log(fizzBuzz(10));
-}
-
-main();
+console.log(fizzBuzz(10));
