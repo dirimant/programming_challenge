@@ -1,3 +1,7 @@
+On-going:
+
+EASY
+
 
 
 Done:
@@ -5,4 +9,4 @@ Done:
 EASY 
   - Markov Sentence Generator
   - FizzBuzz
-  - 
+  - RPN Calculator
