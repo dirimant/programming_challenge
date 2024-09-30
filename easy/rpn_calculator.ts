@@ -40,7 +40,7 @@ function isOperator(operator: string): boolean{
 }
 
 // Verify if array of values is RPN compatible
-function isStringRPNCompatible(calculationSplited: Array<any>): boolean{
+function isArrayRPNCompatible(calculationSplited: Array<any>): boolean{
     let containsNumber = false;
     if(!calculationSplited.length) return false;
 
@@ -54,7 +54,7 @@ function isStringRPNCompatible(calculationSplited: Array<any>): boolean{
     }
 
     if(!containsNumber) return false;
-    
+
     return true;
 }
 
@@ -63,7 +63,7 @@ function calculateRPN(calculationString: string){
     const calculationSplited =  calculationString.split("");
     let stack = new Array<number>();
 
-    if(!isStringRPNCompatible(calculationSplited)) return 'Stack is either empty or not RPN compatible.';
+    if(!isArrayRPNCompatible(calculationSplited)) return 'Stack is either empty or not RPN compatible.';
 
     for(let i = 0; i < calculationSplited.length; i++){
         if(isOperator(calculationSplited[i]) && stack.length >= 2){
@@ -82,4 +82,10 @@ function calculateRPN(calculationString: string){
     return stack;
 }
 
-console.log(calculateRPN('-'));
+
+const start = performance.now();
+
+console.log(calculateRPN('192-332*43-23/3'));
+
+const end = performance.now();
+console.log(`Execution time: ${end - start} ms`);

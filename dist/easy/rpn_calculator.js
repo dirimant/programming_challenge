@@ -72,4 +72,7 @@ function calculateRPN(calculationString) {
     }
     return stack;
 }
-console.log(calculateRPN('-'));
+const start = performance.now();
+console.log(calculateRPN('192-332*43-23/3'));
+const end = performance.now();
+console.log(`Execution time: ${end - start} ms`);
