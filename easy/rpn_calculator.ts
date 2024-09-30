@@ -52,6 +52,9 @@ function isStringRPNCompatible(calculationSplited: Array<any>): boolean{
             containsNumber = true;
         }
     }
+
+    if(!containsNumber) return false;
+    
     return true;
 }
 
@@ -79,4 +82,4 @@ function calculateRPN(calculationString: string){
     return stack;
 }
 
-console.log(calculateRPN('11-4+989-12*192-191/83+'));
+console.log(calculateRPN('-'));

@@ -47,6 +47,8 @@ function isStringRPNCompatible(calculationSplited) {
             containsNumber = true;
         }
     }
+    if (!containsNumber)
+        return false;
     return true;
 }
 function calculateRPN(calculationString) {
@@ -58,7 +60,6 @@ function calculateRPN(calculationString) {
         if (isOperator(calculationSplited[i]) && stack.length >= 2) {
             stack[stack.length - 2] = operate(calculationSplited[i], stack[stack.length - 2], stack[stack.length - 1]);
             stack.pop();
-            //console.log(stack.length);
         }
         else if (isOperator(calculationSplited[i])) {
             stack[stack.length - 2] = operate(calculationSplited[i], 0, stack[stack.length - 1]);
@@ -71,4 +72,4 @@ function calculateRPN(calculationString) {
     }
     return stack;
 }
-console.log(calculateRPN('11-4+989-12*192-191/83+'));
+console.log(calculateRPN('-'));
