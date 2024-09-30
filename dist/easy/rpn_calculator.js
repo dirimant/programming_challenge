@@ -35,7 +35,7 @@ function isOperator(operator) {
     }
 }
 // Verify if array of values is RPN compatible
-function isStringRPNCompatible(calculationSplited) {
+function isArrayRPNCompatible(calculationSplited) {
     let containsNumber = false;
     if (!calculationSplited.length)
         return false;
@@ -54,7 +54,7 @@ function isStringRPNCompatible(calculationSplited) {
 function calculateRPN(calculationString) {
     const calculationSplited = calculationString.split("");
     let stack = new Array();
-    if (!isStringRPNCompatible(calculationSplited))
+    if (!isArrayRPNCompatible(calculationSplited))
         return 'Stack is either empty or not RPN compatible.';
     for (let i = 0; i < calculationSplited.length; i++) {
         if (isOperator(calculationSplited[i]) && stack.length >= 2) {
