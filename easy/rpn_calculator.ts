@@ -66,7 +66,6 @@ function calculateRPN(calculationString: string){
         if(isOperator(calculationSplited[i]) && stack.length >= 2){
             stack[stack.length-2] = operate(calculationSplited[i],stack[stack.length-2],stack[stack.length-1]);
             stack.pop();
-            //console.log(stack.length);
         }
         else if(isOperator(calculationSplited[i])){
             stack[stack.length-2] = operate(calculationSplited[i],0,stack[stack.length-1]);
