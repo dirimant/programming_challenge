@@ -1,12 +1,12 @@
 On-going:
 
-EASY
-
+1) EASY
 
 
 Done:
 
-EASY 
+1) EASY 
   - Markov Sentence Generator
   - FizzBuzz
   - RPN Calculator
+  - ASCII Digital Clock
